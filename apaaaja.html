@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Halaman Satu Foto</title>
+  <style>
+    /* Reset sederhana */
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%}
+
+    /* Container penuh layar */
+    .page{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:#111; /* ganti jika mau warna lain */
+      padding:16px;
+    }
+
+    /* Gaya gambar: responsif dan terpusat */
+    .photo{
+      max-width:100%;
+      max-height:100vh;
+      width:auto;
+      height:auto;
+      display:block;
+      border-radius:8px; /* hapus jika mau tepi tajam */
+      box-shadow:0 8px 30px rgba(0,0,0,0.5);
+      object-fit:contain;
+    }
+
+    /* Caption kecil (opsional) */
+    .caption{
+      margin-top:12px;
+      color:#ddd;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
+      font-size:14px;
+      text-align:center;
+      opacity:0.9;
+    }
+
+    /* Buat tampilan bagus di layar sangat kecil */
+    @media (max-width:420px){
+      .photo{border-radius:6px}
+      .caption{font-size:13px}
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <!-- Ganti atribut src di bawah dengan nama file foto Anda (mis. "foto.jpg")
+         atau URL lengkap (mis. "https://example.com/foto.jpg") -->
+    <div>
+      <img class="photo" src="asset/gorila.jpeg" alt="Foto utama" />
+      <div class="caption">AWOKWOWOWKOWWOKWOKWOKWOW</div>
+    </div>
+  </main>
+</body>
+</html>
